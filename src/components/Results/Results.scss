@@ -1,0 +1,28 @@
+@import '../../styles/base.scss';
+
+.results {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.results__box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+
+  @include md {
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px;
+  }
+}
+
+.results__turn {
+  font-family: PublicSans;
+  color: $grey;
+  margin-bottom: 20px;
+}

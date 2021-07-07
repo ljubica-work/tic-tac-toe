@@ -1,0 +1,132 @@
+@import '../../styles/base.scss';
+
+.drop-menu__wrapper {
+  position: relative;
+  user-select: none;
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 30px;
+  font-family: PublicSans;
+}
+
+.drop-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &--open {
+    .drop-menu__options {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+
+    .drop-menu__arrow::before {
+      left: -5px;
+      transform: rotate(-45deg);
+    }
+
+    .drop-menu__arrow::after {
+      left: 5px;
+      transform: rotate(45deg);
+    }
+
+    .drop-menu__trigger {
+      border-bottom: none;
+      border-radius: 12px 12px 0 0;
+
+      &:hover {
+        border-color: $grey;
+      }
+    }
+  }
+}
+
+.drop-menu__trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  font-size: 20px;
+  font-weight: 300;
+  color: $black;
+  height: 60px;
+  line-height: 60px;
+  background: #ffffff;
+  cursor: pointer;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $grey;
+  border-radius: 12px;
+
+  &:hover {
+    border-color: $lightGreen;
+  }
+}
+
+.drop-menu__options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 2px solid $grey;
+  border-top: 0;
+  background: #fff;
+  transition: all 0.2s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 2;
+  border-radius: 0 0 12px 12px;
+}
+
+.drop-menu__option {
+  position: relative;
+  display: block;
+  padding: 0 22px 0 22px;
+  font-size: 22px;
+  font-weight: 300;
+  color: $black;
+  line-height: 60px;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.drop-menu__option:hover {
+  cursor: pointer;
+  background-color: $lightGrey;
+}
+
+.drop-menu__arrow {
+  position: relative;
+  height: 15px;
+  width: 15px;
+}
+
+.drop-menu__arrow::before,
+.drop-menu__arrow::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  width: 0.15rem;
+  height: 100%;
+  transition: all 0.2s;
+}
+
+.drop-menu__arrow::before {
+  left: -5px;
+  transform: rotate(45deg);
+  background-color: $grey;
+}
+
+.drop-menu__arrow::after {
+  left: 5px;
+  transform: rotate(-45deg);
+  background-color: $grey;
+}
