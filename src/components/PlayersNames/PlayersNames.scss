@@ -1,0 +1,33 @@
+@import '../../styles/base.scss';
+
+.players-names {
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 40px;
+  display: none;
+
+  &--visible {
+    display: flex;
+  }
+}
+
+.players-names__label {
+  font-family: PublicSans;
+  font-size: 16px;
+  color: $grey;
+  margin-bottom: 7px;
+}
+
+.players-names__input {
+  border-radius: 12px;
+  height: 40px;
+  outline: none;
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 15px;
+}
+
+.players-names__error {
+  color: red;
+}

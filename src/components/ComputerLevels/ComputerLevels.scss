@@ -1,0 +1,13 @@
+@import '../../styles/base.scss';
+
+.computer-levels {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+
+  &--visible {
+    display: flex;
+  }
+}
