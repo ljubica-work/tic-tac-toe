@@ -1,0 +1,15 @@
+$viewport-sm: 600px;
+$viewport-md: 900px;
+$viewport-lg: 1200px;
+
+@mixin md {
+  @media (min-width: #{$viewport-sm}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$viewport-md}) {
+    @content;
+  }
+}
